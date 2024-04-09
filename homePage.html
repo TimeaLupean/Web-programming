@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Adjust the background color as needed */
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .quiz-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+        }
+        .quiz-card h2 {
+            color: #333;
+        }
+        .quiz-card button {
+            background-color: #0cc0df;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .quiz-card button:hover {
+            background-color: #09adb9;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <!-- Add your site's navigation and branding here -->
+</div>
+<div class="main-content">
+    <div class="quiz-card">
+        <h2>OOP Questions</h2>
+        <p>Test your object-oriented programming skills.</p>
+        <button onclick="window.location.href='oop-quiz.html';">Start Quiz</button>
+    </div>
+    <div class="quiz-card">
+        <h2>SQL Questions</h2>
+        <p>Challenge your database query knowledge.</p>
+        <button onclick="window.location.href='sql-quiz.html';">Start Quiz</button>
+    </div>
+    <div class="quiz-card">
+        <h2>DSA Questions</h2>
+        <p>Improve your algorithms and data structures.</p>
+        <button onclick="window.location.href='dsa-quiz.html';">Start Quiz</button>
+    </div>
+</div>
+</body>
+</html>
