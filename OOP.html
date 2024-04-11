@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Oriented Programming Quiz</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+<div class="app">
+  <h1>Object Oriented Programming</h1>
+  <div class="quiz">
+    <h2 id="question">Question goes here</h2>
+    <div id="answer-buttons">
+      <button class="btn">Answer 1</button>
+      <button class="btn">Answer 2</button>
+      <button class="btn">Answer 3</button>
+      <button class="btn">Answer 4</button>
+    </div>
+    <button id="next-btn">Next</button>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0.0/firebase-firestore.js"></script>
+
+
+<script type="module">
+  const firebaseConfig = {
+    apiKey: "AIzaSyCeixdhuKRh80p8COaB4Rh-Ie7NL_64f4c",
+    authDomain: "quiz-33d95.firebaseapp.com",
+    databaseURL: "https://quiz-33d95-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "quiz-33d95",
+    storageBucket: "quiz-33d95.appspot.com",
+    messagingSenderId: "761628771669",
+    appId: "1:761628771669:web:f5512cf3b3d9613df29bdc",
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+</script>
+
+<script src="OOP.js"></script>
+</body>
+</html>

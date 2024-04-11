@@ -9,12 +9,47 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Adjust the background color as needed */
+            background-color: #f0f0f0;
+        }
+        .navigation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #001e4d;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: white;
+        }
+        .navigation a:hover {
+            background: #09adb9;
+        }
+        .quiz-text {
+            padding: 0px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            width: 80%;
+            color: #f0f0f0;
         }
         .main-content {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             padding: 20px;
+            margin-top: 50px;
         }
         .quiz-card {
             background-color: white;
@@ -27,8 +62,14 @@
         .quiz-card h2 {
             color: #333;
         }
+        .quiz-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0px;
+            margin-top: 10px;
+        }
         .quiz-card button {
-            background-color: #0cc0df;
+            background-color: #001e4d;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -42,25 +83,52 @@
     </style>
 </head>
 <body>
-<div class="header">
-    <!-- Add your site's navigation and branding here -->
+<div class="navigation">
+    <ul>
+        <li><a href="#" id="your-progress">Your progress</a></li>
+        <li><a href="#" id="useful-links">Useful links</a></li>
+        <li><a href="#" id="sign-out">Sign out</a></li>
+    </ul>
 </div>
 <div class="main-content">
+    <div class="quiz-text">
+        <h1>Improve your interview skills</h1>
+        <p>Are you currently searching an internship and you feel nervous or unprepared? We've got the perfect solution for you!</p>
+        <p>We created 3 sets of quizes covering the most frequently asked questions by interviewers regarding object-oriented programming, databases and data structures and algorithms.</p>
+        <p>Aren't you convinced yet? Just click 'Start quiz' on one of the quizes underneath and get ready to rock that interview!</p>
+    </div>
     <div class="quiz-card">
         <h2>OOP Questions</h2>
         <p>Test your object-oriented programming skills.</p>
-        <button onclick="window.location.href='oop-quiz.html';">Start Quiz</button>
+        <img src="poza.png" alt="Image 1">
+        <button onclick="window.location.href='OOP.html';">Start Quiz</button>
     </div>
     <div class="quiz-card">
         <h2>SQL Questions</h2>
         <p>Challenge your database query knowledge.</p>
-        <button onclick="window.location.href='sql-quiz.html';">Start Quiz</button>
+        <img src="sqlPoza.jpg" alt="Image 2" align="margin-left">
+        <button onclick="window.location.href='SQL.html';">Start Quiz</button>
     </div>
     <div class="quiz-card">
         <h2>DSA Questions</h2>
         <p>Improve your algorithms and data structures.</p>
-        <button onclick="window.location.href='dsa-quiz.html';">Start Quiz</button>
+        <img src="dsa_poza.jpg" alt="Image 3">
+        <button onclick="window.location.href='DSA.html';">Start Quiz</button>
     </div>
 </div>
+<script type="module">
+    document.getElementById("sign-out").addEventListener("click", function(e) {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
+    document.getElementById("useful-links").addEventListener("click", function(e) {
+        e.preventDefault();
+        window.location.href = 'usefulLinks.html';
+    });
+    document.getElementById("your-progress").addEventListener("click", function(e) {
+        e.preventDefault();
+        window.location.href = 'yourProgress.html';
+    });
+</script>
 </body>
 </html>
